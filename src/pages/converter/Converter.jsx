@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import MinutesToHours from "./MinutesToHours";
 import KmToMiles from "./KmToMiles";
-import Btn from "../../components/Btn";
+import Button from "../../components/Button";
 
 function Converter() {
     const [index, setIndex] = useState("xx");
@@ -21,7 +21,7 @@ function Converter() {
             { index === "0" ?  <MinutesToHours /> : null }
             { index === "1" ?   <KmToMiles /> : null }
             <hr />
-            <Btn name={"확인하기"} backgroundColor={"skyblue"} />
+            <Button name={"확인하기"} backgroundColor={"skyblue"} />
         </div>
     )
 }

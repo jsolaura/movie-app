@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styles from "./Button.module.css";
 
-export default function Btn({ name="name", backgroundColor, onClick, fontSize="0.9rem" }) {
-    Btn.propTypes = {
+export default function Button({ name="name", backgroundColor = "#999", onClick, fontSize="0.9rem", className }) {
+    Button.propTypes = {
         name: PropTypes.string.isRequired,
         backgroundColor: PropTypes.string,
         fontSize: PropTypes.string,
@@ -10,12 +11,9 @@ export default function Btn({ name="name", backgroundColor, onClick, fontSize="0
     return (
         <button style={{
             backgroundColor: backgroundColor,
-            color: "#fff",
-            padding: "10px 20px",
-            border: 0,
-            borderRadius: 10,
-            cursor: "pointer",
             fontSize: fontSize,
-        }} onClick={onClick}>{name}</button>
+        }}      className={styles.btn}
+                onClick={onClick}
+            >{name}</button>
     )
 }
